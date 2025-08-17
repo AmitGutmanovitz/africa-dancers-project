@@ -1,0 +1,94 @@
+@import './base.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set your background color here */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFF5E6; /* Warm cream background */
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Anchor styles */
+a,
+.green {
+  text-decoration: none;
+  color: #00C896; /* Turquoise */
+  transition: all 0.3s ease;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+a:hover {
+  color: #FF427F; /* Fuchsia */
+  background-color: rgba(255, 66, 127, 0.1);
+}
+
+/* App layout */
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #FFFFFF; /* White content area */
+  box-shadow: 0 0 20px rgba(255, 158, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Two columns on large screens */
+@media (min-width: 1024px) {
+  #app {
+    grid-template-columns: 1fr; /* Changed to single column for better content flow */
+    padding: 2rem;
+  }
+}
+
+/* Color palette */
+:root {
+  --color-primary: #FF9E00; /* Vibrant orange */
+  --color-secondary: #FF427F; /* Fuchsia pink */
+  --color-accent: #00C896; /* Turquoise */
+  --color-background: #FFF5E6; /* Warm cream */
+  --color-content: #FFFFFF; /* White */
+  --color-text: #333333; /* Dark gray */
+  --color-text-light: #666666;
+  
+  --section-gap: 2rem;
+}
+
+/* Semantic color variables */
+:root {
+  --color-background: var(--color-background);
+  --color-background-soft: #FFFFFF;
+  --color-background-mute: #F8F8F8;
+
+  --color-border: rgba(255, 158, 0, 0.2);
+  --color-border-hover: rgba(255, 66, 127, 0.3);
+
+  --color-heading: var(--color-primary);
+  --color-text: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1A1A1A;
+    --color-background-soft: #222222;
+    --color-background-mute: #282828;
+
+    --color-border: rgba(255, 158, 0, 0.3);
+    --color-border-hover: rgba(255, 66, 127, 0.4);
+
+    --color-heading: #FF9E00;
+    --color-text: #EEEEEE;
+  }
+}
